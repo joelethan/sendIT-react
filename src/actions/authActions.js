@@ -7,8 +7,9 @@ import setAuthToken from "../utilis/setAuthToken";
 export const registerUser = (userData, history) => dispatch => {
     return axios
     .post("https://joelcamp14.herokuapp.com/auth/signup", userData )
-    .then(res => history.push("/login"))
-    .catch(err => 
+    .then((res) => history.push("/login"))
+    
+    .catch(err /* istanbul ignore next */ => 
         dispatch({
             type: GET_ERRORS,
             payload: err.response.data
@@ -20,7 +21,7 @@ export const registerUser = (userData, history) => dispatch => {
 export const loginUser = (userData) => dispatch => {
 return axios
 .post("https://joelcamp14.herokuapp.com/auth/login", userData )
-.then(res => {
+.then(res => /* istanbul ignore next */{
     //save to localstorage
     const { token } = res.data;
     localStorage.setItem( "jwtToken", token )
@@ -30,7 +31,7 @@ return axios
     // Set current user 
     dispatch(setCurrentUser(decoded))
 })
-.catch(err => 
+.catch((err) /* istanbul ignore next */=> 
     dispatch({
         type: GET_ERRORS,
         payload: err.response.data

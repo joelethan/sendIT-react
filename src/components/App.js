@@ -10,7 +10,6 @@ import {Provider} from "react-redux";
 import Navigation from './Navigation';
 import store from "../Store";
 import setAuthToken from '../utilis/setAuthToken';
-// import "../App.css";
 
 
 
@@ -33,19 +32,27 @@ import setAuthToken from '../utilis/setAuthToken';
 
 
 export default class App extends Component {
+
+  getStyle=()=>{
+    return{
+      backgroundColor:"#4B5320",
+      height:"-webkit-fill-available"
+    }
+
+  }
   render() {
     return (
       <Provider store={store}>
         <Router>
-          <div className="App" >
+          <div className="App" style={this.getStyle()}>
         <Navigation/>
-        <div className="container">
+      
             <Route exact path="/" component={Home}></Route>
             <Route exact path="/login" component={Login}></Route>
             <Route exact path="/register" component={Register}></Route>
             <Route exact path="/create" component={CreateParcels}></Route>
             </div>
-            </div>
+          
         </Router>
         </Provider>
     )

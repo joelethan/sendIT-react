@@ -11,7 +11,6 @@ export const addParcel = (postData,hist) => dispatch => {
         }
     })
       .then(res => {
-          console.log(res.data);
           
         dispatch({
             type: ADD_POST,
@@ -20,26 +19,16 @@ export const addParcel = (postData,hist) => dispatch => {
         document.location.href="/";
     })
       .catch(err =>{
-
-
-        console.log(err);
         dispatch({
             type: GET_ERRORS,
             payload: err.response.data
-        })
-
+        })});
     }
-        );
-        
-    }
-
 
 export const getParcels=()=>dispatch=>{
     dispatch({
         type:PARCELS_LOADING
     })
-
-
         return axios.get("https://joelcamp14.herokuapp.com/api/v1/parcels",{
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwtToken")

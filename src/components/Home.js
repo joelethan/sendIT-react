@@ -16,11 +16,11 @@ this.props.getParcels();
     const {parcels,loading}=this.props.parcels;
 
     if(loading){
-      return <h2>Loading...</h2>
+      return <h2 className="ml-5">Loading...</h2>
     }
     if(parcels==="No orders found"){
       return(
-        <h3>No Parcels created by you yet</h3>
+        <h3 className="ml-5">No Parcels created by you yet</h3>
       )
     }
 
@@ -31,7 +31,7 @@ this.props.getParcels();
 
       }
         return(
-          
+          <div className="container">
           <table className="table table-condensed">
         <thead>
             <tr>
@@ -52,7 +52,7 @@ this.props.getParcels();
          ))
         }
          </tbody>
-         </table>
+         </table></div>
          
         )
     

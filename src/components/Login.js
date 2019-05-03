@@ -22,6 +22,8 @@ componentDidMount(){
   }
 }
 
+// complete function ....
+        /* istanbul ignore next */
 componentWillReceiveProps (nextProps){
   if(nextProps.auth.isAuthenticated){
     this.props.history.push("/")
