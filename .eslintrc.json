@@ -1,0 +1,98 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "extends": "airbnb",
+  "plugins": [
+    "react"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 6
+  },
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "function-paren-newline": [
+      "error",
+      "consistent"
+    ],
+    "react/destructuring-assignment": [0,"never"],
+    "indent": [
+      "error",
+      2
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "double"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "import/no-extraneous-dependencies": [
+      "error", {
+        "devDependencies": true
+      }
+    ],
+    "no-undef": 0,
+    "new-cap": 0,
+    "no-console": 0,
+    "global-require":0,
+    "no-debugger": 1,
+    "consistent-return":0,
+    "no-var": 1,
+    "jsx-a11y/click-events-have-key-events":0,
+    "no-restricted-globals":0,
+    "no-param-reassign":["error", { "props": false }],
+    "no-trailing-spaces": 0,
+    "prefer-destructuring":0,
+    "eol-last": 0,
+    "react/no-unused-state":0,
+    "no-unused-expressions":0,
+    "no-unused-vars": 0,
+    "import/prefer-default-export":0,
+    "no-underscore-dangle": 0,
+    "no-alert": 0,
+    "no-lone-blocks": 0,
+    "jsx-quotes": 1,
+    "react/prefer-stateless-function":0,
+    "react/prop-types": [0],
+    "no-shadow": "off",
+    "react/button-has-type":0,
+    "import/no-named-as-default": 0,
+    "jsx-a11y/anchor-is-valid":0,
+    "jsx-a11y/label-has-associated-control": [ "error", {
+      "required": {
+        "some": [ "nesting", "id"  ]
+      }
+    }],
+    "jsx-a11y/label-has-for": [ "error", {
+      "required": {
+        "some": [ "nesting", "id"  ]
+      }
+    }],
+    "react/display-name": [
+      1,
+      {
+        "ignoreTranspilerName": false
+      }
+    ]
+  }
+}
