@@ -4,6 +4,14 @@ import {connect} from "react-redux";
 class CreateParcels extends Component {
 
 
+
+
+  componentDidMount(){
+    if(localStorage.getItem("jwtToken")===null){
+      window.location.href="/login?message=Please login first";
+    }
+  }
+
   state = {
     pickup_location: "",
     weight: "",
@@ -12,8 +20,6 @@ class CreateParcels extends Component {
 };
 
 onSubmit=(e)=>{
-
-console.log(this.state)
 
   const newParcel = {
     pickup_location: this.state.pickup_location,

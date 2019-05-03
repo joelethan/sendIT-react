@@ -18,7 +18,19 @@ class Register extends Component {
         this.props.history.push("/")
       }
     }
-
+// Function to check letters and numbers
+ isAlnum=(inputtxt)=>{
+  let letterNumber = /^[0-9a-zA-Z]+$/;
+  if(inputtxt.match(letterNumber)){
+    return true;
+   }
+ else
+   { 
+    return false; 
+   }
+   }
+    // complete function ....
+        /* istanbul ignore next */
     componentWillReceiveProps (nextProps){
        if(nextProps.errors){
          this.setState({errors: nextProps.errors })
@@ -36,8 +48,18 @@ class Register extends Component {
         email: this.state.email,
         password: this.state.password,
       }
+
+
+      if(!this.isAlnum(this.state.name)){
+        const errors={
+          message:"Username should only be letters and numbers"};
+
+        this.setState({errors})
+        return false;
+      }else{
       this.props.registerUser(newUser, this.props.history)
       }
+    }
 
   render() {
     const { isAuthenticated } = this.props.auth;
@@ -51,7 +73,7 @@ class Register extends Component {
                 <form onSubmit={this.onSubmit}>
                   <div className="form-group">
                     <input type="text" className="form-control form-control-lg"
-                    placeholder="Name" name="name" value={this.state.name} onChange={this.onChange} required />
+                    placeholder="Username" name="name" value={this.state.name} onChange={this.onChange} required />
                   </div>
                   <div className="form-group">
                     <input type="email" className="form-control form-control-lg" 

@@ -39,13 +39,13 @@ export default class App extends Component {
         <Router>
           <div className="App" >
         <Navigation/>
-        <div className="container">
+      
             <Route exact path="/" component={Home}></Route>
             <Route exact path="/login" component={Login}></Route>
             <Route exact path="/register" component={Register}></Route>
             <Route exact path="/create" component={CreateParcels}></Route>
             </div>
-            </div>
+          
         </Router>
         </Provider>
     )

@@ -1,1 +1,2 @@
 # sendIT-react2
+[![Build Status](https://travis-ci.org/joelethan/sendIT-react.svg?branch=ft-write-unit-test-165788326)](https://travis-ci.org/joelethan/sendIT-react) [![Maintainability](https://api.codeclimate.com/v1/badges/5dd71f510f7dcd20df9a/maintainability)](https://codeclimate.com/github/joelethan/sendIT-react/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/5dd71f510f7dcd20df9a/test_coverage)](https://codeclimate.com/github/joelethan/sendIT-react/test_coverage)
