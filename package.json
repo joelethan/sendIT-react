@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/joelethan/sendIT-react2#readme",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "expect": "^24.7.1",
     "express": "^4.16.4",
     "fetch-mock": "^7.3.1",
